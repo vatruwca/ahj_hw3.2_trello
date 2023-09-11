@@ -1,0 +1,156 @@
+.container {
+    position: relative;
+    display: grid;
+    width: 800px;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: rgb(130, 38, 235);
+    border-radius: 10px;
+  }
+  
+  h3 {
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .list {
+    height: fit-content;
+    background-color: rgb(230, 226, 231);
+    margin: 5px;
+    border-radius: 10px;
+  }
+  
+  ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .card {
+    height: fit-content;
+    background-color: rgb(230, 226, 231);
+    margin: 5px;
+    border-radius: 10px;
+  }
+  
+  .item {
+    padding: 20px 10px;
+    box-sizing: border-box;
+    font-size: 20px;
+    color:  rgb(41, 41, 41);
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 2px 1px rgba(0,0,0,0.3);
+    position: relative;
+  }
+  
+  .item:hover {
+    cursor: default;
+  }
+  
+  .item:active {
+    cursor: grabbing;
+    transform: rotate(-2deg);
+  }
+  
+  .item__delete {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(200, 200, 200);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 5px;
+    opacity: 0;
+  }
+  
+  .item__delete:hover,
+  .item__delete:active {
+    opacity: 1;
+    cursor: pointer;
+  }
+  
+  .item__delete:active {
+    background-color: rgb(170, 170, 170);
+  }
+  
+  .title {
+    margin: 10px;
+    color: rgb(94, 94, 94);
+  }
+  
+  .addCard {
+    font-weight: 700;
+    font-size: 20px;
+    color: rgb(94, 94, 94);
+    margin-left: 5px;
+  }
+  
+  .addCard:first-child:hover {
+    cursor: default;
+  }
+  
+  .addCard:last-child:hover {
+    cursor: pointer;
+    border-bottom: 1px solid rgb(94, 94, 94);
+  }
+  
+  .new-task {
+    margin: 10px;
+  }
+  
+  .new-task__content {
+    width: 100%;
+    min-height: 50px;
+    border: none;
+    border-radius: 3px;
+    resize: none;
+  }
+  
+  .new-task__controls {
+    display: flex;
+    padding: 5px;
+    margin-top: 10px;
+  }
+  
+  .new-task__add {
+    background-color: rgb(69, 223, 55);
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+  }
+  
+  .new-task__add:hover {
+    background-color: rgb(95, 230, 95);
+  }
+  
+  .new-task__cancel {
+    margin-left: 10px;
+    font-size: 30px;
+    align-self: center;
+    cursor: pointer;
+  }
+  
+  .new-task__cancel:hover {
+    font-weight: bold;
+  }
+  
+  .dragged {
+    width: 250px;
+    border-radius: 5px;
+    z-index: 999;
+    pointer-events: none;
+    background-color: #fff;
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+  }
